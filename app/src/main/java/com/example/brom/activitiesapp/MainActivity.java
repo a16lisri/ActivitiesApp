@@ -1,5 +1,6 @@
 package com.example.brom.activitiesapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,8 +37,14 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 String str = "Name: " + mountainNames[position] + '\n' + "Position: " + mountainLocations[position] + '\n' + "Height: " + mountainHeights[position] + '\n';
                 Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), mountaindetails.class);
+                startActivity(intent);
             }
+
+
         });
+
+
 
         // adapter.add("Hilding");
         // 1. Create a ListView as in previous assignment
