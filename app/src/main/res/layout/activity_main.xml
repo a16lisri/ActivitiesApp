@@ -12,4 +12,5 @@
         android:id="@+id/my_listview">
     </ListView>
 
+
 </LinearLayout>

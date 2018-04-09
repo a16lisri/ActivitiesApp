@@ -2,8 +2,11 @@ package com.example.brom.activitiesapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
 
         ListView myListView = (ListView)findViewById(R.id.my_listview);
         myListView.setAdapter(adapter);
+
+        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                String str = "Name: " + mountainNames[position] + '\n' + "Position: " + mountainLocations[position] + '\n' + "Height: " + mountainHeights[position] + '\n';
+                Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
+            }
+        });
 
         // adapter.add("Hilding");
         // 1. Create a ListView as in previous assignment
