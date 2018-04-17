@@ -22,9 +22,9 @@ public class mountaindetails extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
-        String str = intent.getStringExtra("Info");
+        String str = intent.getStringExtra("info_namn");
 
-        TextView textView = (TextView) findViewById(R.id.info_text);
+        TextView textView = (TextView) findViewById(R.id.info_namn);
         textView.setText(str);
     }
 

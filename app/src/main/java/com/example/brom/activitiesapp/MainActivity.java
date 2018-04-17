@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 String str = "Name: " + mountainNames[position] + '\n' + "Position: " + mountainLocations[position] + '\n' + "Height: " + mountainHeights[position] + '\n';
                 // Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), mountaindetails.class);
-                intent.putExtra("Info", str);
+                intent.putExtra("info_namn", mountainNames[position]);
                 startActivity(intent);
             }
 
