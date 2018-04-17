@@ -23,9 +23,17 @@ public class mountaindetails extends AppCompatActivity {
 
         Intent intent = getIntent();
         String str = intent.getStringExtra("info_namn");
+        String str2 = intent.getStringExtra("info_position");
+        String str3 = intent.getStringExtra("info_hojd");
 
         TextView textView = (TextView) findViewById(R.id.info_namn);
         textView.setText(str);
+
+        TextView textView2 = (TextView) findViewById(R.id.info_position);
+        textView2.setText(str2);
+
+        TextView textView3 = (TextView) findViewById(R.id.info_hojd);
+        textView3.setText(str3);
     }
 
 }
